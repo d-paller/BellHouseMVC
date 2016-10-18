@@ -3,9 +3,60 @@
     ViewBag.Title = "Home";
 }
 
-<div class="container page-seg">
+<div class="container">
     @* Add image *@
     <h1>Bell House Restaurant</h1>
     <h3>Shelbyville, KY</h3>
 
+</div>
+
+<div id="special" class="container page-div">
+    <h2>This Weekends Featured Dish</h2>
+    @{ 
+        var currentDay = DateTime.Now.Day;
+        if (currentDay <= 7) // First Week
+        {
+            <h3>Week One Special</h3>
+        } else if (currentDay > 8 && currentDay <= 14)
+        {
+            <h3>Week Two Special</h3>
+        } else if (currentDay > 15 && currentDay <= 21)
+        {
+            <h3>Week Three Special</h3>
+        } else if (currentDay > 22 && currentDay <= 28)
+        {
+            <h3>Week Four Special</h3>
+        }
+        else
+        {
+            <h3>Weekend Five Special</h3>
+        }
+    }
+</div>
+
+<div id="home-contact" class="container page-div">
+    <h4>Address: </h4><h5>721 Main Street Downtown Shelbyville, KY 40065</h5><h5>@Html.ActionLink("Directions", "Home", "Directions")</h5>
+    <h4>Phone: </h4><h5><a href="tel:5024375678">(502)437-5678</a></h5>
+    <h4>Email: </h4><h5>Please got to our @Html.ActionLink("Contact Page", "Home", "Contact")</h5>
+</div>
+
+<div id="reviews" class="container page-div">
+    <h2>Reviews</h2>
+
+    <div class="col-sm-6">
+        <div id="TA_selfserveprop443" class="TA_selfserveprop">
+            <ul id="aRd1GtvCkr" class="TA_links w9XWM9v">
+                <li id="vZzn9PUGzC" class="912pDVQsytwM">
+                    <a target="_blank" href="https://www.tripadvisor.com/">
+                        <img src="https://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=443&amp;locationId=1900660&amp;lang=en_US&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=false&amp;iswide=true&amp;border=false&amp;display_version=2"></script>
+    </div>
+
+    <div class="col-sm-6">
+        <h3>TODO: Yelp</h3>
+    </div>
 </div>
