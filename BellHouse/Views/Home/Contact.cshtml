@@ -1,7 +1,53 @@
-﻿
+﻿@using BellHouse.Models;
+@model ContactForm
 @{
     ViewBag.Title = "Contact";
 }
 
-<h2>Contact</h2>
+<div class="container">
+    @* Add image *@
+    <h1>Contact Us</h1>
+</div>
 
+<div id="contact-form" class="page-div">
+    <form>
+        @Html.ValidationSummary()
+        <div class="form-group col-sm-6">
+            <div>
+                @Html.ValidationMessageFor(x => x.Name)
+                @Html.LabelFor(x => x.Name)
+            </div>
+            <div>
+                @Html.TextBoxFor(x => x.Name, new { @placeholder = "Name", @type = "text" })
+            </div>
+        </div>
+
+        <div class="form-group col-sm-6">
+            <div>
+                @Html.ValidationMessageFor(x => x.Email)
+                @Html.LabelFor(x => x.Email)
+            </div>
+            <div>
+                @Html.TextBoxFor(x => x.Email, new { @placeholder = "Your Email", @type = "email" })
+            </div>
+        </div>
+
+        <div class="form-group col-sm-12">
+            <div>
+                @Html.ValidationMessageFor(x => x.Messaeg)
+                @Html.LabelFor(x => x.Messaeg)
+            </div>
+            <div>
+                @Html.TextAreaFor(x => x.Messaeg, new
+       {
+           @placeholder = "Enter your message here.",
+           @type = "text",
+           @class = "message-box"
+       })
+            </div>
+        </div>
+
+        <input type="submit" value="Submit" name="submit-message" class="btn btn-default" />
+        <input type="reset" value="Reset" name="reset-message" class="btn btn-danger" />
+    </form>
+</div>

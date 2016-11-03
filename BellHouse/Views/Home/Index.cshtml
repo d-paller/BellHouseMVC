@@ -10,18 +10,13 @@
 
 </div>
 
-<div class="parallax-window" data-parallax="scroll" data-image-src="~/Images/WoodPlanksBare0347_2_S.jpg">
-</div>
 <div class="page-div">
     <p>
         Bell House Restaurant, one of the finest places to have lunch and dinner in Shelbyville.
     </p>
     <p>
         We are in the heart of Downtown Shelbyville in a home that was fully renovated from 2007-2009 by Bobby and Sue
-        Andriot. If you visit our "About" page, you can read about the progress that this house has been through in the past century.
-    </p>
-    <p>
-        We hope that as you enter Bell House, you feel welcomed.
+        Andriot. If you visit our @Html.ActionLink("About", "About", "Home") page, you can read about the progress that this house has been through in the past century.
     </p>
     <p>
         We are striving to be fine dining, but still delight in the "down home hospitality" that makes you feel welcome.
@@ -37,11 +32,12 @@
         beautiful environment...you can't go wrong! We look forward to serving you!
     </p>
     <p>
-        We offer a wide variety of services (see our about page to learn more), so if you don't see what you're looking for on the list, please don't hesitate to ask. 502-437-5678
+        We offer a wide variety of services (see our about page to learn more), so if you don't see what you're looking for on the list, 
+        please don't hesitate to ask! @Html.ActionLink("Contact Us", "Contact", "Home")
     </p>
 </div>
 
-<div id="special" class="container-fluid page-div">
+<div id="special" class="page-div">
     <h2>This Weekends Featured Dish</h2>
     @{
         var currentDay = DateTime.Now.Day;
@@ -68,12 +64,12 @@
     }
 </div>
 
-<div class="container-fluid page-div">
+<div class="page-div">
     <h2>News and Upcoming Events</h2>
 </div>
 
-<div id="home-contact" class="container page-div">
-    <h4>Address: </h4><h5>721 Main Street Downtown Shelbyville, KY 40065</h5><h5>@Html.ActionLink("Directions", "Home", "Directions")</h5>
+<div id="home-contact" class="page-div">
+    <h4>Address: </h4><h5>721 Main Street Downtown Shelbyville, KY 40065</h5><h5>@Html.ActionLink("Directions", "About", "Home")</h5>
     <h4>Phone: </h4><h5><a href="tel:5024375678">(502)437-5678</a></h5>
-    <h4>Email: </h4><h5>Please got to our @Html.ActionLink("Contact Page", "Home", "Contact")</h5>
+    <h4>Email: </h4><h5>Please got to our @Html.ActionLink("Contact Page", "Contact", "Home")</h5>
 </div>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BellHouse.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,7 +27,7 @@ namespace BellHouse.Controllers
 
         public ActionResult Contact()
         {
-            return View();
+            return View(new ContactForm());
         }
     }
 }
