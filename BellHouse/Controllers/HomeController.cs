@@ -27,7 +27,7 @@ namespace BellHouse.Controllers
 
         public ActionResult Contact()
         {
-            return View(new ContactForm());
+            return View(new ContactModel());
         }
     }
 }

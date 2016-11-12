@@ -1,5 +1,5 @@
 ﻿@using BellHouse.Models;
-@model ContactForm
+@model ContactModel
 @{
     ViewBag.Title = "Contact";
 }
@@ -14,7 +14,6 @@
         @Html.ValidationSummary()
         <div class="form-group col-sm-6">
             <div>
-                @Html.ValidationMessageFor(x => x.Name)
                 @Html.LabelFor(x => x.Name)
             </div>
             <div>
@@ -24,7 +23,6 @@
 
         <div class="form-group col-sm-6">
             <div>
-                @Html.ValidationMessageFor(x => x.Email)
                 @Html.LabelFor(x => x.Email)
             </div>
             <div>
@@ -34,11 +32,10 @@
 
         <div class="form-group col-sm-12">
             <div>
-                @Html.ValidationMessageFor(x => x.Messaeg)
-                @Html.LabelFor(x => x.Messaeg)
+                @Html.LabelFor(x => x.Message)
             </div>
             <div>
-                @Html.TextAreaFor(x => x.Messaeg, new
+                @Html.TextAreaFor(x => x.Message, new
        {
            @placeholder = "Enter your message here.",
            @type = "text",
