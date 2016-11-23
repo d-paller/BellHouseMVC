@@ -172,6 +172,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\MenuPartials\_Brunch.cshtml" />
+    <Content Include="Views\Home\MenuPartials\_Lunch.cshtml" />
+    <Content Include="Views\Home\MenuPartials\_Beverages.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
