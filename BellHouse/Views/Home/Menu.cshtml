@@ -3,30 +3,32 @@
     ViewBag.Title = "Menu";
 }
 
-<div class="menu">
+<div class="menu-nav text-center">
     <ul class="nav nav-tabs">
         <li><a data-toggle="tab" href="#brunch">Brunch</a></li>
         <li class="active"><a data-toggle="tab" href="#lunch">Lunch</a></li>
         <li><a data-toggle="tab" href="#dinner">Dinner</a></li>
         <li><a data-toggle="tab" href="#beer-wine">Beer &Aacute; Wine</a></li>
     </ul>
-
-    <div class="tab-content">
-        <div id="brunch" class="tab-pane fade in">
-            @Html.Partial("MenuPartials/_Brunch")
-    </div>
-
-    <div id="lunch" class="tab-pane fade in active">
-        Partial
-    </div>
-
-    <div id="dinner" class="tab-pane fade in">
-        Partial
-    </div>
-
-    <div id="beer-wine" class="tab-pane fade in">
-        Partial
-    </div>
 </div>
+
+<div class="menu">
+    <div class="tab-content">
+        <div id="brunch" class="tab-pane fade in menu-body">
+            @Html.Partial("MenuPartials/_Brunch")
+        </div>
+
+        <div id="lunch" class="tab-pane fade in active">
+            Partial
+        </div>
+
+        <div id="dinner" class="tab-pane fade in">
+            Partial
+        </div>
+
+        <div id="beer-wine" class="tab-pane fade in">
+            Partial
+        </div>
+    </div>
 </div>
 
