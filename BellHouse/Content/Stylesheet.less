@@ -1,20 +1,20 @@
-﻿body {
-    background-image: url('../Images/WoodPlanksBare0347_2_S.jpg');
-    background-repeat: repeat-y;
-    background-size: contain;
-    background-attachment: fixed;
+﻿html{
+    background: white;
+}
+
+body {
+
     padding: 0px;
-    font-size: x-large;
 }
 
 .page-div{
-    background-image: url('../Images/PaperCloseupBackground.jpg');
     border: 1px black solid;
-    box-shadow: 0px -10px 40px black;
+    border-top: 5px black solid;
+    box-shadow: 0px 0px 40px black;
     margin: auto; 
     margin-bottom: 5%;
-    width: 100%;
     height: auto;
+    max-width: 75%;
 }
 
 .page-content{
@@ -45,12 +45,70 @@ h2{
 }
 
 h4{
+    border-top: double 6px black;
     font-size: 30px;
-    border-bottom: 3px black double;
-    width: 50%;
-    margin-top: 30px;
+    margin-top: 75px;
+    padding-top: 20px;
+}
+
+.menu-head{
+    font-weight: bolder;
+    border-bottom: solid 10px #8e0000;
+    padding-bottom: 5px;
+}
+.menu-item{
+    font-weight: bolder;
+    border-bottom: 1px black solid;
+    margin-top: 20px;
 }
 
 .body-of-text{
     text-indent: 50px;
+}
+
+.menu{
+    background: white;
+    min-height: 100vh;
+    padding: 20%;
+    padding-top: 75px;
+    
+}
+
+.menu-nav{
+    position: fixed;
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    background: white;
+    width: 100vw;
+    box-shadow: 0px 0px 10px black;
+
+}
+
+.menu-body{
+    margin:auto;
+    max-width: 75%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.tab-content{
+        border: 2px solid black;
+        box-shadow: 0px 0px 20px black;
+}
+
+footer{
+    background: white;
+    padding: 10px;
+}
+
+.nav-tabs > li, .nav-pills > li {
+    float:none;
+    display:inline-block;
+}
+
+.nav-tabs {
+    text-align:center;
+
 }
