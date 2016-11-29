@@ -29,5 +29,11 @@ namespace BellHouse.Controllers
         {
             return View(new ContactModel());
         }
+
+        [HttpPost]
+        public ActionResult Contact(ContactModel model)
+        {
+            return View("Success");
+        }
     }
 }
