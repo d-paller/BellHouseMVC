@@ -3,32 +3,34 @@
     ViewBag.Title = "Menu";
 }
 
-<div class="menu-nav text-center">
-    <ul class="nav nav-tabs">
-        <li><a data-toggle="tab" href="#brunch">Brunch</a></li>
-        <li class="active"><a data-toggle="tab" href="#lunch">Lunch</a></li>
-        <li><a data-toggle="tab" href="#dinner">Dinner</a></li>
-        <li><a data-toggle="tab" href="#beer-wine">Beer &Aacute; Wine</a></li>
-    </ul>
-</div>
+<div id="menu-body" class="backdrop">
+    <div class="menu-nav text-center">
+        <ul class="nav nav-tabs">
+            <li><a class="menu-tab-btn" data-toggle="tab" href="#brunch">Brunch</a></li>
+            <li class="active menu-tab-btn"><a data-toggle="tab" href="#lunch">Lunch</a></li>
+            <li><a class="menu-tab-btn" data-toggle="tab" href="#dinner">Dinner</a></li>
+            <li><a class="menu-tab-btn" data-toggle="tab" href="#beer-wine">Beer &amp; Wine</a></li>
+        </ul>
+    </div>
 
-<div class="menu">
-    <div class="tab-content">
-        <div id="brunch" class="tab-pane fade in menu-body">
-            @Html.Partial("MenuPartials/_Brunch")
-        </div>
+    <div class="menu">
+        <div class="tab-content">
+            <div id="brunch" class="tab-pane fade in menu-body">
+                @Html.Partial("MenuPartials/_Brunch")
+            </div>
 
-        <div id="lunch" class="tab-pane fade in active menu-body">
-            @Html.Partial("MenuPartials/_Lunch")
-        </div>
+            <div id="lunch" class="tab-pane fade in active menu-body">
+                @Html.Partial("MenuPartials/_Lunch")
+            </div>
 
-        <div id="dinner" class="tab-pane fade in menu-body">
-            @Html.Partial("MenuPartials/_Dinner")
-        </div>
+            <div id="dinner" class="tab-pane fade in menu-body">
+                @Html.Partial("MenuPartials/_Dinner")
+            </div>
 
-        <div id="beer-wine" class="tab-pane fade in menu-body">
-            @Html.Partial("MenuPartials/_Beverages")
+            <div id="beer-wine" class="tab-pane fade in menu-body">
+                @Html.Partial("MenuPartials/_Beverages")
+            </div>
         </div>
     </div>
-</div>
 
+</div>

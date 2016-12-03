@@ -3,77 +3,77 @@
     ViewBag.Title = "Home";
 }
 
-<div class="container home-head">
-    @* Add image *@
-    <h1>Bell House Restaurant</h1>
-    <h3>Shelbyville, KY</h3>
-
+<div id="home-body" class="backdrop">
 </div>
 
-<div class="page-div">
-    <div class="page-content">
-        <p>
-            Bell House Restaurant, one of the finest places to have lunch and dinner in Shelbyville.
-        </p>
-        <p>
-            We are in the heart of Downtown Shelbyville in a home that was fully renovated from 2007-2009 by Bobby and Sue
-            Andriot. If you visit our @Html.ActionLink("About", "About", "Home") page, you can read about the progress that this house has been through in the past century.
-        </p>
-        <p>
-            We are striving to be fine dining, but still delight in the "down home hospitality" that makes you feel welcome.
-        </p>
-        <p>
-            There is no particular dress code. We offer a quite atmosphere, with soft background music to acompany you while you enjoy your meal.
-        </p>
-        <p>
-            Reservations are not necessary, but they are accepted and appreciated.
-        </p>
-        <p>
-            We hope your experience in Bell House is one that you desire to have again and to tell people about. Good service, good food, and a
-            beautiful environment...you can't go wrong! We look forward to serving you!
-        </p>
-        <p>
-            We offer a wide variety of services (see our about page to learn more), so if you don't see what you're looking for on the list,
-            please don't hesitate to ask! @Html.ActionLink("Contact Us", "Contact", "Home")
-        </p>
-    </div></div>
+    <div class="page-div">
+        <div class="page-content">
+            <p>
+                Bell House Restaurant, one of the finest places to have lunch and dinner in Shelbyville.
+            </p>
+            <p>
+                We are in the heart of Downtown Shelbyville in a home that was fully renovated from 2007-2009 by Bobby and Sue
+                Andriot. If you visit our @Html.ActionLink("About", "About", "Home") page, you can read about the progress that this house has been through in the past century.
+            </p>
+            <p>
+                We are striving to be fine dining, but still delight in the "down home hospitality" that makes you feel welcome.
+            </p>
+            <p>
+                There is no particular dress code. We offer a quite atmosphere, with soft background music to acompany you while you enjoy your meal.
+            </p>
+            <p>
+                Reservations are not necessary, but they are accepted and appreciated.
+            </p>
+            <p>
+                We hope your experience in Bell House is one that you desire to have again and to tell people about. Good service, good food, and a
+                beautiful environment...you can't go wrong! We look forward to serving you!
+            </p>
+            <p>
+                We offer a wide variety of services (see our about page to learn more), so if you don't see what you're looking for on the list,
+                please don't hesitate to ask! @Html.ActionLink("Contact Us", "Contact", "Home")
+            </p>
+        </div>
+    </div>
 
-<div id="special" class="page-div">
-    <div class="page-content">
-        <h2>This Weekends Featured Dish</h2>
-        @{
-            var currentDay = DateTime.Now.Day;
-            if (currentDay <= 7) // First Week
-            {
-                <h3>Week One Special</h3>
+    <div id="special" class="page-div">
+        <div class="page-content">
+            <h2>This Weekends Featured Dish</h2>
+            @{
+                var currentDay = DateTime.Now.Day;
+                if (currentDay <= 7) // First Week
+                {
+                    <h3>Week One Special</h3>
+                }
+                else if (currentDay > 8 && currentDay <= 14)
+                {
+                    <h3>Week Two Special</h3>
+                }
+                else if (currentDay > 15 && currentDay <= 21)
+                {
+                    <h3>Week Three Special</h3>
+                }
+                else if (currentDay > 22 && currentDay <= 28)
+                {
+                    <h3>Week Four Special</h3>
+                }
+                else
+                {
+                    <h3>Weekend Five Special</h3>
+                }
             }
-            else if (currentDay > 8 && currentDay <= 14)
-            {
-                <h3>Week Two Special</h3>
-            }
-            else if (currentDay > 15 && currentDay <= 21)
-            {
-                <h3>Week Three Special</h3>
-            }
-            else if (currentDay > 22 && currentDay <= 28)
-            {
-                <h3>Week Four Special</h3>
-            }
-            else
-            {
-                <h3>Weekend Five Special</h3>
-            }
-        }
-    </div></div>
+        </div>
+    </div>
 
-<div class="page-div">
-    <div class="page-content">
-        <h2>News and Upcoming Events</h2>
-    </div></div>
+    <div class="page-div">
+        <div class="page-content">
+            <h2>News and Upcoming Events</h2>
+        </div>
+    </div>
 
-<div id="home-contact" class="page-div">
-    <div class="page-content">
-        <h4>Address: </h4><h5>721 Main Street Downtown Shelbyville, KY 40065</h5><h5>@Html.ActionLink("Directions", "About", "Home")</h5>
-        <h4>Phone: </h4><h5><a href="tel:5024375678">(502)437-5678</a></h5>
-        <h4>Email: </h4><h5>Please got to our @Html.ActionLink("Contact Page", "Contact", "Home")</h5>
-    </div></div>
+    <div id="home-contact" class="page-div">
+        <div class="page-content">
+            <h4>Address: </h4><h5>721 Main Street Downtown Shelbyville, KY 40065</h5><h5>@Html.ActionLink("Directions", "About", "Home")</h5>
+            <h4>Phone: </h4><h5><a href="tel:5024375678">(502)437-5678</a></h5>
+            <h4>Email: </h4><h5>Please got to our @Html.ActionLink("Contact Page", "Contact", "Home")</h5>
+        </div>
+    </div>
