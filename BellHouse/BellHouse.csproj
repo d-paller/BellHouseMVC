@@ -157,6 +157,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContactModel.cs" />
+    <Compile Include="Models\ReservationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -177,6 +178,7 @@
     <Content Include="Views\Home\MenuPartials\_Lunch.cshtml" />
     <Content Include="Views\Home\MenuPartials\_Beverages.cshtml" />
     <Content Include="Views\Home\MenuPartials\_Dinner.cshtml" />
+    <Content Include="Views\Home\Reservation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -13,5 +13,7 @@ namespace BellHouse.Models
 
         public string Message { get; set; }
 
+        
+
     }
 }

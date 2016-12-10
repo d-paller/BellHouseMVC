@@ -33,7 +33,18 @@ namespace BellHouse.Controllers
         [HttpPost]
         public ActionResult Contact(ContactModel model)
         {
-            return View("Success");
+            return View("ContactSuccess");
+        }
+
+        public ActionResult Reservation()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Reservation(ReservationModel model)
+        {
+            return View("ResvervationSuccess");
         }
     }
 }
