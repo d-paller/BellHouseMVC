@@ -1,18 +1,43 @@
-﻿@model BellHouse.Models.ReservationModel
-
+﻿@using BellHouse.Models;
+@model ReservationModel
 @{
-    Layout = null;
+    ViewBag.Title = "Reservations";
 }
+<div id="reservation-body" class="backdrop">
+    <div class="normal-head"><h2>Place a Reservation</h2></div>
+    @using (Html.BeginForm("Reservation", "Home", FormMethod.Post))
+    {
+        <div id="contact-form" class="well">
+            @Html.ValidationSummary()
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-4 no-padding">
+                        @Html.LabelFor(x => x.Name)
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Reservation</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>
+                        @Html.TextBoxFor(x => x.Name, new { @placeholder = "Name", @type = "text", @class = "form-control" })
+                    </div>
+                    <div class="col-sm-4 no-padding">
+                        @Html.LabelFor(x => x.PhoneNumber)
+                        @Html.TextBoxFor(x => x.PhoneNumber, new { @placeholder = "You're Phone Number", @type = "tel", @class = "form-control" })
+                    </div>
+                    <div class="col-sm-4 no-padding">
+                        @Html.LabelFor(x => x.NumberInParty)
+                        @Html.TextBoxFor(x => x.NumberInParty, new { @type = "range", @class = "form-control", @min = "1", @max = "20" })
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 no-padding">
+                        @Html.LabelFor(x => x.Date.Date)
+                        @Html.TextBoxFor(x => x.Date.Date, new { @type = "date", @class = "form-control"})
+                    </div>
+                    <div class="col-sm-4 no-padding">
+                        @Html.LabelFor(x => x.Date.TimeOfDay)
+                        @Html.TextBoxFor(x => x.Date.TimeOfDay, new { @type = "time", @class = "form-control" })
+                    </div>
+                </div>
+                </div>
+                <input type="submit" value="Submit" name="submit-message" class="btn btn-default" />
+                <input type="reset" value="Reset" name="reset-message" class="btn btn-danger" />
+            </div>
+    }
+</div>

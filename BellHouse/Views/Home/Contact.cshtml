@@ -3,30 +3,21 @@
 @{
     ViewBag.Title = "Contact";
 }
-
 <div id="contact-body" class="backdrop">
     <div class="normal-head"><h2>Contact Us</h2></div>
     @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
     {
         <div id="contact-form" class="well">
-
             @Html.ValidationSummary()
             <div class="form-group">
                 <div class="col-sm-6 no-padding">
-                    <div>
-                        @Html.LabelFor(x => x.Name)
-                    </div>
-                    <div>
-                        @Html.TextBoxFor(x => x.Name, new { @placeholder = "Name", @type = "text", @class = "form-control" })
-                    </div>
+                    @Html.LabelFor(x => x.Name)
+
+                    @Html.TextBoxFor(x => x.Name, new { @placeholder = "Name", @type = "text", @class = "form-control" })
                 </div>
                 <div class="col-sm-6 no-padding">
-                    <div>
-                        @Html.LabelFor(x => x.Email)
-                    </div>
-                    <div>
-                        @Html.TextBoxFor(x => x.Email, new { @placeholder = "Your Email", @type = "email", @class = "form-control" })
-                    </div>
+                    @Html.LabelFor(x => x.Email)
+                    @Html.TextBoxFor(x => x.Email, new { @placeholder = "Your Email", @type = "email", @class = "form-control" })
                 </div>
                 <div class="col-sm-12 no-padding">
                     <div style="margin-top: 15px;">
@@ -34,19 +25,16 @@
                     </div>
                     <div>
                         @Html.TextAreaFor(x => x.Message, new
-               {
-                   @placeholder = "Enter your message here.",
-                   @type = "text",
-                   @class = "message-box form-control",
-                   @style = "min-height: 200px;"
-               })
-
+                   {
+                       @placeholder = "Enter your message here.",
+                       @type = "text",
+                       @class = "message-box form-control",
+                       @style = "min-height: 200px;"
+                   })
                     </div>
                 </div>
-
                 <input type="submit" value="Submit" name="submit-message" class="btn btn-default" />
                 <input type="reset" value="Reset" name="reset-message" class="btn btn-danger" />
-
             </div>
         </div>
     }
